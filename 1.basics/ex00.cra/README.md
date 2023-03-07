@@ -68,3 +68,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## create-react-app 실행하기
+$ npm i -g create-react-app : create-react-app 패키지를 전역으로 설치하는 명령어
+$ npm start
+
+create-react-app 폴더 생성할 경우에는<br>
+$ npx create-react-app 폴더이름

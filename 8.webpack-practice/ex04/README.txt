@@ -18,7 +18,7 @@ module: {
   }
 
 4. 빌드
-[ex01]$ npm run build
+[ex04]$ npm run build
 
 5. 실행
-[ex01]$ npm start
+[ex04]$ npm start

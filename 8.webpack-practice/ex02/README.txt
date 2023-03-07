@@ -1,7 +1,7 @@
 ex02: 번들링 환경(webpack.config.js) 설정하기 
 
 1. 설치 패키지
-[ex01]$ npm i -D webpack webpack-cli express
+[ex02]$ npm i -D webpack webpack-cli express
 
 2. 번들링 환경(webpack.config.js) 설정
   - entry
@@ -14,7 +14,7 @@ ex02: 번들링 환경(webpack.config.js) 설정하기
   }
 
 4. 빌드
-[ex01]$ npm run build
+[ex02]$ npm run build
 
 5. 실행
-[ex01]$ npm start
+[ex02]$ npm start
