@@ -18,3 +18,8 @@ ex08: JSX Tutorials
 4. npm 스크립팅
 5. 테스트 서버 실행
     $ npm run debug src=(01|02|03|04)
+
+===========================================
+JSX란?
+JavaScript XML의 줄임말이다. 이것은 React에서 UI를 작성할 수 있는 문법이다.
+JSX는 JavaScript 코드 안에서 HTML과 유사한 구문을 사용할 수 있다.

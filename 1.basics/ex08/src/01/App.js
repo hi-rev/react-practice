@@ -11,6 +11,7 @@ function App() {
         */          
       }
       <input type='text' maxLength='10'/>
+      <input type='button' value='안뇽'/>
 
       {
         /*

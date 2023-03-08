@@ -1,12 +1,10 @@
 import React from 'react';
 
-function Clock01(props) {
+function Clock02(props) {
     const now = new Date();
     let hours = now.getHours();
     let minutes = now.getMinutes();
     let seconds = now.getSeconds();
-
-    
 
     return (
         <div>
@@ -21,4 +19,4 @@ function Clock01(props) {
     );
 }
 
-export default Clock01;
+export default Clock02;
