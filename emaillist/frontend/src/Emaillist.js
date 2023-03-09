@@ -1,29 +1,15 @@
 import React from 'react';
 import styles from './assets/css/Emaillist.css';
 
-const Emaillist = () => {
+const Emaillist = ({list}) => {
     return (
         <div className={styles.Emaillist}>
             <li>
-                    둘리
-                    <br/>
-                    dooly@gmail.com
-                </li>
-                <li>
-                    마이콜
-                    <br/>
-                    michol@gmail.com
-                </li>
-                <li>
-                    도우너
-                    <br/>
-                    douner@gmail.com
-                </li>
-                <li>
-                    또치
-                    <br/>
-                    ddochi@gmail.com
-                </li>
+                {list.firstName}
+                {list.lastName}
+                <br/>
+                {list.email}
+            </li>
         </div>
     );
 }
