@@ -9,3 +9,7 @@ React Practice
     FE(React) + BE(Spring Boot, API Server)
 8. [참고1] webpack-practice **
 9. [참고2] babel-practice **
+
+kanbanboard
+emaillist
+mysite07(guestbook, gallery)
