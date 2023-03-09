@@ -3,6 +3,7 @@ import React from 'react';
 function App() {
   /*
     리액트 컴포넌트는 단일 루트 노드만 렌더링 할수 있다.
+    -> 여기서는 <div> 태그로 감싸주었다.
 
     오류:
       <h2>01</h2>

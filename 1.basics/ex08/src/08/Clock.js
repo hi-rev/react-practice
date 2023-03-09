@@ -28,13 +28,13 @@ function Clock(props) {
              * <!-- --> HTML 주석은 사용할 수 없다.
              */
         }
-        {('0' + (hours > 12 ? hours - 12 : hours)).slice(-2)} +
-        {":"} +
-        {('0' + minutes).slice(-2)} +
-        {":"} +
-        {('0' + seconds).slice(-2)} +
-        {" "} +
-        {hours > 12 ? 'PM' : 'AM'} +
+        {('0' + (hours > 12 ? hours - 12 : hours)).slice(-2)}
+        {':'}
+        {('0' + minutes).slice(-2)}
+        {':'}
+        {('0' + seconds).slice(-2)}
+        {" "}
+        {hours > 12 ? 'PM' : 'AM'}
     </div>
     );
 }
