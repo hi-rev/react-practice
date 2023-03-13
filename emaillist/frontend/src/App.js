@@ -1,5 +1,6 @@
 import React from 'react';
 import './assets/css/App.css';
+import lists from './assets/json/data.json';
 import Emaillist from './Emaillist';
 import RegisterForm from './RegisterForm';
 import Searchbar from './Searchbar';
@@ -9,7 +10,7 @@ function App(props) {
       <div id="App" className={'App'}>
         <RegisterForm />
         <Searchbar />
-        <Emaillist />
+        <Emaillist lists={lists} />
       </div>
   );
 }
