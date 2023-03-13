@@ -5,20 +5,24 @@ import Emaillist from './Emaillist';
 import RegisterForm from './RegisterForm';
 import Searchbar from './Searchbar';
 
-function App(props) {
+function App() {
   const [emails, setEmails] = useState(data);
-  const notifyKeyWordChanged = function() {
-    // 만약 keyword가 firstname or lastname or email에 
-    const newEmails = emails.filter(function(e) {
-      return true
-    })
+
+  const notifyKeyWordChanged = function(search) {
+    console.log(search);
+    // 만약 keyword가 firstname or lastname or email에 있을 경우
+    const emails = data.filter(e =>
+      e.firstName.includes(search) || e.lastName.includes(search) || e.email.includes(search)
+    );
+    console.log(emails);
+    setEmails(emails);
   }
 
   return (
       <div id="App" className={'App'}>
         <RegisterForm />
-        <Searchbar />
-        <Emaillist lists={data} />
+        <Searchbar callback={notifyKeyWordChanged} />
+        <Emaillist lists={emails} />
       </div>
   );
 }
