@@ -6,7 +6,6 @@ ex02: Component - React Event
 4) Event Handler 예제
 5) ref 사용하기: Function Component
 6) ref 사용하기: Class Component
-7) 
 
 =================================================================
 
