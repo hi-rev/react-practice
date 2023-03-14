@@ -4,11 +4,14 @@ import Clock from './Clock';
 
 export default function App() {
     const [ticks, setTicks] = useState(0);
+    const [time, setTime] = useState(new Date());
 
     useEffect(() => {
-        setInterval(function() {
-            // tick ++ 하기
+        const IntervalId = setInterval(function() {
+            setTime(new Date());
+            setTicks((ticks) => (ticks + 1));
         }, 1000);
+        return (() => clearInterval(IntervalId))
     }, []);
     return (
         <div>
@@ -18,10 +21,10 @@ export default function App() {
                 null :
                 <Clock
                     message={'ex05: useEffect Hook example'}
-                    hours={'11'} /*state.hours*/
-                    minutes={'07'} /*state.minutes */
-                    seconds={'30'}/> /*state.seconds*/
-            }    
+                    hours={time.getHours()}
+                    minutes={time.getMinutes()}
+                    seconds={time.getSeconds()}/>
+            }
         </div>
     );
 }

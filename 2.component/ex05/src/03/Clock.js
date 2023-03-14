@@ -6,21 +6,21 @@ export default class Clock extends Component {
         return (
             <div className="clock-field">
                 <div>
-                    <p className="hours">{this.props.hours}</p>
+                    <p className="hours">{this.props.hours < 10 ? '0' + this.props.hours : this.props.hours}</p>
                     <p className="placeholder"></p>
                 </div>
                 <div className="colon">
                     <p>:</p>
                 </div>
                 <div className="numbers">
-                    <p>{this.props.minutes}</p>
+                    <p>{this.props.minutes < 10 ? '0' + this.props.minutes : this.props.minutes}</p>
                     <p className="placeholder"></p>
                 </div>
                 <div className="colon">
                     <p>:</p>
                 </div>
                 <div className="numbers">
-                    <p>{this.props.seconds}</p>
+                    <p>{this.props.seconds < 10 ? '0' + this.props.seconds : this.props.seconds}</p>
                     <p className="placeholder"></p>
                 </div>
                 <div className="AmPm">
@@ -35,7 +35,11 @@ export default class Clock extends Component {
         );
     }
 
+    componentDidMount() {
+        this.intervalID = setInterval(() => this.updateTime(), 1000);
+    }
+    
     componentWillUnmount() {
-        console.log('Clock', 'componentWillUnmount');
+        clearInterval(this.intervalID);
     }
 }
