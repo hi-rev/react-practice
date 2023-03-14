@@ -6,7 +6,7 @@ export default class App extends Component {
     constructor() {
         super(...arguments);
     }
-    // setInterver ?
+    
     render() {
         return (
             <div className='clock-display'>
