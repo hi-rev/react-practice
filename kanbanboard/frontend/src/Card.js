@@ -4,22 +4,27 @@ import TaskList from './TaskList';
 
 const Card = ({no, title, description, tasks, callback}) => {
     const [showDetail, setShowDetail] = useState(false);
+
     return (
         <div className={styles.Card}>
-            <div className={
-                showDetail ? [styles.Card__Title, styles.Card__Title__open].join(' ')
-                           : styles.Card__Title}
-            onClick={e => setShowDetail(!showDetail)}>
-            {title}</div>
+            <div
+                className={
+                    showDetail ?
+                        [styles.Card__Title, styles.Card__Title__open].join(' ') : 
+                        styles.Card__Title
+                }
+                onClick={e => setShowDetail(!showDetail)}>
+                {title}
+            </div>            
             {
-                showDetail ? 
+                showDetail ?    
                     <div className={styles.Card__Details}>
                         {description}
-                    
-                    <TaskList cardNo={no} tasks={tasks} callback={callback} />
-                    </div>  
-                    : null
-            }
+                        <TaskList cardNo={no} tasks={tasks} callback={callback}/>
+                    </div>
+                    :
+                    null
+            }        
         </div>
     );
 };

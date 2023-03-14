@@ -8,7 +8,7 @@ const Task = ({no, cardNo, name, done, callback}) => {
                 type='checkbox'
                 checked={done}
                 onChange={e => {
-                    callback(cardNo, no, e.target.checked)
+                    callback(cardNo, no, e.target.checked);
                 }}/>
             {name}    
             <a href='#' className={styles.TaskList__Task__remove} />
