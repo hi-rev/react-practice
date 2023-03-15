@@ -6,8 +6,9 @@ import Searchbar from './Searchbar';
 
 function App() {
   const [emails, setEmails] = useState([]);
+  const [JsonEmails, setJsonEmail] = useState([]);
 
-  // emaillist 출력
+  // read
   const fetchEmails = async () => {
     try {
       const response = await fetch(`/api/email`, {
@@ -27,6 +28,7 @@ function App() {
       }
 
       setEmails(json.data);
+      setJsonEmail(json.data);
 
     } catch(err) {
       console.log(err.message);
@@ -39,7 +41,7 @@ function App() {
 
   const notifyKeyWordChanged = function(search) {
     // json 데이터값을 filter
-    const filterEmails = emails.filter(e =>
+    const filterEmails = JsonEmails.filter(e =>
       e.firstName.includes(search) || e.lastName.includes(search) || e.email.includes(search)
     );
     setEmails(filterEmails);

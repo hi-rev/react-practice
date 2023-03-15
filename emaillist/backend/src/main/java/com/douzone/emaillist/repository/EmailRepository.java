@@ -21,5 +21,9 @@ public class EmailRepository {
 	public Boolean insert(EmailVo emailVo) {
 		return sqlSession.insert("email.insert", emailVo) == 1;
 	}
+
+	public Boolean delete(Long no) {
+		return sqlSession.delete("email.delete", no) == 1;
+	}
 	
 }

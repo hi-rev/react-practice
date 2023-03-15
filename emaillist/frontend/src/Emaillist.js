@@ -8,6 +8,7 @@ const Emaillist = ({lists}) => {
             {
                 lists.map(list => <Email
                                     key={list.no}
+                                    no={list.no}
                                     firstName={list.firstName}
                                     lastName={list.lastName}
                                     email={list.email} /> )

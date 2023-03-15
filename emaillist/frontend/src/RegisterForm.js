@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import styles from './assets/css/RegisterForm.css';
 
 const RegisterForm = () => {
+
+    // insert
     const [emails, setEmails] = useState({
        firstName: "",
        lastName: "",
@@ -16,6 +18,8 @@ const RegisterForm = () => {
     }
 
     const handleSubmit = async (e) => {
+        e.preventDefault();
+
         const newEmail = {
             no: null,
             firstName: emails.firstName,
