@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const Email = ({firstName, lastName, email}) => {
+const Email = ({no, firstName, lastName, email}) => {
     return (
         <li>
             {firstName}
