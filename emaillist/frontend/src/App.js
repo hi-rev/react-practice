@@ -35,6 +35,41 @@ function App() {
     }    
   }
 
+  // insert
+  const AddEmail = async (f, l, em) => {
+   
+    const newEmail = {
+        no: null,
+        firstName: f,
+        lastName: l,
+        email: em
+    };
+
+    try {
+        const response = await fetch('/api/email', {
+            method: 'post',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(newEmail)
+        });
+
+        if(!response.ok) {
+            throw new Error(`${response.status} ${response.statusText}`);
+        }
+
+        const json = await response.json();
+        if(json.result !== 'success') {
+            throw new Error(`${json.result} ${json.message}`)
+        }
+
+        setEmails([json.data, ...emails]);
+        } catch(err) {
+            console.log(err.message);
+        }
+  }
+
   useEffect(() => {
     fetchEmails();
   }, []);
@@ -49,7 +84,7 @@ function App() {
 
   return (
       <div id="App" className={'App'}>
-        <RegisterForm />
+        <RegisterForm callbackAddEmail={AddEmail}/>
         <Searchbar callback={notifyKeyWordChanged} />
         <Emaillist lists={emails} />
       </div>
