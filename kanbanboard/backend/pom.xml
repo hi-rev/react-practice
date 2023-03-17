@@ -93,10 +93,12 @@
 				</executions>	
 				<configuration>
 					<executable>npm</executable>
+					<workingDirectory>../frontend</workingDirectory>
 					<arguments>
 						<argument>run</argument>
 						<argument>build</argument>
 					</arguments>
+					<environmentVariables></environmentVariables>
 				</configuration>
 			</plugin>						
 		</plugins>
