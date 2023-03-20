@@ -101,7 +101,7 @@
 					<environmentVariables></environmentVariables>
 				</configuration>
 			</plugin>
-			<plugin>
+				<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-resources-plugin</artifactId>
 				<executions>
@@ -115,13 +115,13 @@
 							<outputDirectory>${basedir}/target</outputDirectory>
 							<resources>
 								<resource>
-									<directory>src/main/resources</directory>
+									<directory>src/main/resources/script</directory>
 								</resource>
 							</resources>
 						</configuration>
 					</execution>
 				</executions>
-			</plugin>						
+			</plugin>					
 		</plugins>
 	</build>
 </project>
